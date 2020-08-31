@@ -87,16 +87,16 @@
   .v-image-next {
     width: 35px; height: 35px; position: absolute; top: 50%;
     font-size: 15px; text-align: center; background: none; transform: translateY(-50%);
-    z-index: 1000; opacity: 0.45; transition: opacity 0.2s ease-in-out; cursor: pointer;
+    z-index: 1000; opacity: 0.65; transition: opacity 0.2s ease-in-out; cursor: pointer;
     svg {
       margin: 5px auto; color: #e5e6eb;
     }
     &:hover {
       opacity: 1;
       svg {
-        color: white;
+        color: rgba(white, .75);
         path {
-          fill: white;
+          fill: rgba(white, .75);
         }
       }
     }

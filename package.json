@@ -1,7 +1,7 @@
 {
   "name": "@ispa.io/vimage",
-  "version": "1.0.0",
-  "description": "vimage is a plugin for Vue.js that allows you to show images in full-screen gallery by adding only one directive to the <img> tag.",
+  "version": "1.0.1",
+  "description": "vimage is a plugin for Vue.js that allows you to show images in full-screen gallery by adding only one directive to the tag.",
   "main": "src/index.js",
   "scripts": {
     "dev": "node_modules/webpack/bin/webpack.js --mode production --watch --progress",

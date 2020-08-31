@@ -25,7 +25,7 @@
 - [ ] Video support
 - [ ] Picture tag support
 - [ ] Gallery Auto play
-
+- [ ] Integrate with el-image (Element UI)
 ## Getting started
 
 ### Install
@@ -48,9 +48,9 @@ const vImageConfig = {
   //  Global title
   'title': null,
   //  Show download button
-  'allow-download': false,
+  'download': false,
   //  Show thumbnails
-  'show-thumbnails': false,
+  'thumbnails': false,
   //  on Event to show image
   'openOn': 'click',
 }
@@ -60,19 +60,19 @@ Vue.use(vImage, vImageConfig);
 **Grouping images list**
 
 ```html
-<div v-image show-thumbnails title="global title">
-  <img group="group-1" allow-download src="..." data-src="..." alt="image 1">
-  <img group="group-1" allow-download src="..." data-src="..." alt="image 2">
-  <img group="group-2" src="..." data-src="..." alt="image 3">
-  <img group="group-2" src="..." data-src="..." alt="image 4">
+<div v-image data-thumbnails title="global title">
+  <img data-group="group-1" data-download src="..." data-src="..." alt="image 1">
+  <img data-group="group-1" data-download src="..." data-src="..." alt="image 2">
+  <img data-group="group-2" src="..." data-src="..." alt="image 3">
+  <img data-group="group-2" src="..." data-src="..." alt="image 4">
 </div>
 ```
 OR
 ```html
 <div v-image="{
   'group': 'group-name',
-  'allow-download': true,
-  'show-thumbnails': true
+  'download': true,
+  'thumbnails': true
 }">
   <img src="..." data-src="..." alt="image 1">
   <img src="..." data-src="..." alt="image 2">
@@ -80,15 +80,15 @@ OR
 ```
 OR
 ```html
-<img v-image group="group-1" allow-download src="..." data-src="..." alt="image 1">
-<img v-image group="group-1" allow-download src="..." data-src="..." alt="image 2">
-<img v-image group="group-2" src="..." data-src="..." alt="image 3">
-<img v-image group="group-2" src="..." data-src="..." alt="image 4">
+<img v-image data-group="group-1" data-download src="..." data-src="..." alt="image 1">
+<img v-image data-group="group-1" data-download src="..." data-src="..." alt="image 2">
+<img v-image data-group="group-2" src="..." data-src="..." alt="image 3">
+<img v-image data-group="group-2" src="..." data-src="..." alt="image 4">
 ```
 
 **Only one image**
 ```html
-<img v-image allow-download src="...">
+<img v-image data-download src="...">
 ```
 OR
 ```html

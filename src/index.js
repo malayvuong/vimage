@@ -1,3 +1,5 @@
+/* jshint scripturl:true */
+
 import vImage from './vImage.vue';
 //  Get Attributes
 const ga = (el, col) => {
@@ -96,8 +98,15 @@ const install = (Vue, options) => {
         }
         //  Begin set listener
         for (let index = 0; index < el.children.length; index++) {
-          if (el.children[index].tagName === 'IMG') {
-            vImageListener(el.children[index], binding, options);
+          const children = el.children[index];
+          if (children.tagName === 'IMG') {
+            vImageListener(children, binding, options);
+          } else {
+            for (let i = 0; i < children.children.length; i++) {
+              if (children.children[i].tagName === 'IMG') {
+                vImageListener(children.children[i], binding, options);
+              }
+            }
           }
         }
       } else {
